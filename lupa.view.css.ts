@@ -7,7 +7,8 @@ namespace $.$$ {
 		Camera: {
 			objectFit: 'cover',
 			transform: 'scale(2)',
-			filter: 'contrast(1.25)',
+			alignSelf: 'stretch',
+			justifySelf: 'stretch',
 		},
 		
 	} )
