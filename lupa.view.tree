@@ -1,0 +1,5 @@
+$hyoo_lupa $mol_view
+	sub /
+		<= Camera $mol_video_camera
+			title \$hyoo_lupa - PWA Magnifying Glass
+			facing \environment
