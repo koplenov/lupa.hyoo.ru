@@ -23,11 +23,14 @@ jobs:
       with:
         folder: 'hyoo/lupa/-' #FIXME path to build app
     
-    - name: Use oxr463/setup-cordova
-      uses: oxr463/setup-cordova@0.0.3
+    - uses: darkshredder/web-to-app-action@main
       with:
-        exec: |
-          cordova platform add android && \
-          cordova build --no-telemetry && \
-          cp "$(find . -name '*.apk')" .
-
+          build-folder-path: 'hyoo/lupa/-' # Defaults to build, It is the folder where build files or html are stored
+          app-name: 'lupa.hyoo.ru' # Defaults to MyApp
+          output-folder-path: 'my-apks' # Defaults to apk/, Where final APK files are created
+    
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: Final-apks
+        path: my-apks/ # Should be same as "output-folder-path"
