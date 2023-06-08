@@ -23,16 +23,11 @@ jobs:
       with:
         folder: 'hyoo/lupa/-' #FIXME path to build app
     
-    - name: Use coturiv/setup-ionic
-      uses: coturiv/setup-ionic@v1
+    - name: Use oxr463/setup-cordova
+      uses: oxr463/setup-cordova@0.0.3
       with:
-        java-version: 8
-    - name: Use coturiv/setup-ionic
-      uses: coturiv/setup-ionic@v1
-      with:
-        cordova-version: 8
-
-    - name: Build
-      run: |
-        ionic cordova build android --prod
+        exec: |
+          cordova platform add android && \
+          cordova build --no-telemetry && \
+          cp "$(find . -name '*.apk')" .
 
