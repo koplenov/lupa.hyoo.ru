@@ -1174,7 +1174,7 @@ declare namespace $ {
 
 declare namespace $ {
 
-	type $mol_svg_path__geometry__1CJRRKVU = $mol_type_enforce<
+	type $mol_svg_path__geometry__IIAPJVA4 = $mol_type_enforce<
 		ReturnType< $mol_icon['path'] >
 		,
 		ReturnType< $mol_svg_path['geometry'] >
@@ -1379,27 +1379,27 @@ declare namespace $ {
 //# sourceMappingURL=source.view.tree.d.ts.map
 declare namespace $ {
 
-	type $mol_video_camera__title__T6C4YDYF = $mol_type_enforce<
+	type $mol_video_camera__title__72JBF22A = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_video_camera['title'] >
 	>
-	type $mol_video_camera__facing__36EB6RI2 = $mol_type_enforce<
+	type $mol_video_camera__facing__8C4KW6WA = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_video_camera['facing'] >
 	>
-	type $mol_video_camera__sharpness__JIWDPO7Z = $mol_type_enforce<
+	type $mol_video_camera__sharpness__J540LEU7 = $mol_type_enforce<
 		number
 		,
 		ReturnType< $mol_video_camera['sharpness'] >
 	>
-	type $mol_video_camera__torch__V1A5EVW5 = $mol_type_enforce<
+	type $mol_video_camera__torch__NSQ4PYMT = $mol_type_enforce<
 		boolean
 		,
 		ReturnType< $mol_video_camera['torch'] >
 	>
-	type $mol_link_source__uri__U05XT66S = $mol_type_enforce<
+	type $mol_link_source__uri__6CZ8BB03 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_source['uri'] >
