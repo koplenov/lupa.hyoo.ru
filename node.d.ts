@@ -846,19 +846,18 @@ declare namespace $ {
 }
 
 declare namespace $ {
-    type $mol_style_prop_result = Record<string, $mol_style_func<'var'>>;
-    function $mol_style_prop(prefix: string, postfixes: Array<string>): $mol_style_prop_result;
+    function $mol_style_prop<Keys extends string[]>(prefix: string, keys: Keys): Record<Keys[number], $mol_style_func<"var", unknown>>;
 }
 
 declare namespace $ {
-    const $mol_theme: $mol_style_prop_result;
+    const $mol_theme: Record<"image" | "line" | "text" | "focus" | "back" | "hover" | "card" | "current" | "special" | "control" | "shade" | "field", $mol_style_func<"var", unknown>>;
 }
 
 declare namespace $ {
 }
 
 declare namespace $ {
-    let $mol_gap: $mol_style_prop_result;
+    let $mol_gap: Record<"text" | "blur" | "block" | "space" | "round", $mol_style_func<"var", unknown>>;
 }
 
 declare namespace $ {
@@ -1274,7 +1273,7 @@ declare namespace $ {
 
 declare namespace $ {
 
-	type $mol_svg_path__geometry__OJ0MZQ2B = $mol_type_enforce<
+	type $mol_svg_path__geometry__B5B2PKHB = $mol_type_enforce<
 		ReturnType< $mol_icon['path'] >
 		,
 		ReturnType< $mol_svg_path['geometry'] >
@@ -1461,27 +1460,27 @@ declare namespace $ {
 //# sourceMappingURL=source.view.tree.d.ts.map
 declare namespace $ {
 
-	type $mol_video_camera__title__S821QX95 = $mol_type_enforce<
+	type $mol_video_camera__title__O9QLF061 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_video_camera['title'] >
 	>
-	type $mol_video_camera__facing__L1HS2C5H = $mol_type_enforce<
+	type $mol_video_camera__facing__J84T28EQ = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_video_camera['facing'] >
 	>
-	type $mol_video_camera__sharpness__V520S2RU = $mol_type_enforce<
+	type $mol_video_camera__sharpness__NLZQ5SN4 = $mol_type_enforce<
 		number
 		,
 		ReturnType< $mol_video_camera['sharpness'] >
 	>
-	type $mol_video_camera__torch__UK6J2VQR = $mol_type_enforce<
+	type $mol_video_camera__torch__GM9FRLNJ = $mol_type_enforce<
 		boolean
 		,
 		ReturnType< $mol_video_camera['torch'] >
 	>
-	type $mol_link_source__uri__86GNH0ON = $mol_type_enforce<
+	type $mol_link_source__uri__OVL1DKO5 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_source['uri'] >
