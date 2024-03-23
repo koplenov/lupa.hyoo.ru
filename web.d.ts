@@ -839,6 +839,16 @@ declare namespace $ {
 
 //# sourceMappingURL=stack.view.tree.d.ts.map
 declare namespace $ {
+    export function $mol_wire_sync<Host extends object>(obj: Host): ObjectOrFunctionResultAwaited<Host>;
+    type FunctionResultAwaited<Some> = Some extends (...args: infer Args) => infer Res ? (...args: Args) => Awaited<Res> : Some;
+    type MethodsResultAwaited<Host extends Object> = {
+        [K in keyof Host]: FunctionResultAwaited<Host[K]>;
+    };
+    type ObjectOrFunctionResultAwaited<Some> = (Some extends (...args: any) => unknown ? FunctionResultAwaited<Some> : {}) & (Some extends Object ? MethodsResultAwaited<Some> : Some);
+    export {};
+}
+
+declare namespace $ {
 
 	export class $mol_video_player extends $mol_view {
 		uri( ): string
@@ -851,11 +861,13 @@ declare namespace $ {
 		revolume( next?: any ): any
 		retime( next?: any ): any
 		redurate( next?: any ): any
-		play_started( next?: any ): any
-		play( next?: any ): any
-		pause( next?: any ): any
+		playing_event( next?: any ): any
+		play_event( next?: any ): any
+		pause_event( next?: any ): any
 		dom_name( ): string
 		playing( next?: boolean ): boolean
+		play( ): any
+		pause( ): any
 		volume( next?: number ): number
 		time( next?: number ): number
 		duration( ): number
@@ -874,9 +886,9 @@ declare namespace $ {
 			volumechange( next?: ReturnType< $mol_video_player['revolume'] > ): ReturnType< $mol_video_player['revolume'] >,
 			timeupdate( next?: ReturnType< $mol_video_player['retime'] > ): ReturnType< $mol_video_player['retime'] >,
 			durationchange( next?: ReturnType< $mol_video_player['redurate'] > ): ReturnType< $mol_video_player['redurate'] >,
-			playing( next?: ReturnType< $mol_video_player['play_started'] > ): ReturnType< $mol_video_player['play_started'] >,
-			play( next?: ReturnType< $mol_video_player['play'] > ): ReturnType< $mol_video_player['play'] >,
-			pause( next?: ReturnType< $mol_video_player['pause'] > ): ReturnType< $mol_video_player['pause'] >,
+			playing( next?: ReturnType< $mol_video_player['playing_event'] > ): ReturnType< $mol_video_player['playing_event'] >,
+			play( next?: ReturnType< $mol_video_player['play_event'] > ): ReturnType< $mol_video_player['play_event'] >,
+			pause( next?: ReturnType< $mol_video_player['pause_event'] > ): ReturnType< $mol_video_player['pause_event'] >,
 		}) 
 	}
 	
@@ -896,16 +908,6 @@ declare namespace $.$$ {
 }
 
 declare namespace $ {
-}
-
-declare namespace $ {
-    export function $mol_wire_sync<Host extends object>(obj: Host): ObjectOrFunctionResultAwaited<Host>;
-    type FunctionResultAwaited<Some> = Some extends (...args: infer Args) => infer Res ? (...args: Args) => Awaited<Res> : Some;
-    type MethodsResultAwaited<Host extends Object> = {
-        [K in keyof Host]: FunctionResultAwaited<Host[K]>;
-    };
-    type ObjectOrFunctionResultAwaited<Some> = (Some extends (...args: any) => unknown ? FunctionResultAwaited<Some> : {}) & (Some extends Object ? MethodsResultAwaited<Some> : Some);
-    export {};
 }
 
 declare namespace $ {
@@ -1173,7 +1175,7 @@ declare namespace $ {
 
 declare namespace $ {
 
-	type $mol_svg_path__geometry__BWEQ9D45 = $mol_type_enforce<
+	type $mol_svg_path__geometry__IE1MACXY = $mol_type_enforce<
 		ReturnType< $mol_icon['path'] >
 		,
 		ReturnType< $mol_svg_path['geometry'] >
@@ -1379,27 +1381,27 @@ declare namespace $ {
 //# sourceMappingURL=source.view.tree.d.ts.map
 declare namespace $ {
 
-	type $mol_video_camera__title__IQN13IP1 = $mol_type_enforce<
+	type $mol_video_camera__title__DVEBUFS5 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_video_camera['title'] >
 	>
-	type $mol_video_camera__facing__KXMDS3AQ = $mol_type_enforce<
+	type $mol_video_camera__facing__MHWOKHAP = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_video_camera['facing'] >
 	>
-	type $mol_video_camera__sharpness__OMZZP9F1 = $mol_type_enforce<
+	type $mol_video_camera__sharpness__BA9DS0HI = $mol_type_enforce<
 		number
 		,
 		ReturnType< $mol_video_camera['sharpness'] >
 	>
-	type $mol_video_camera__torch__FQZNUO6N = $mol_type_enforce<
+	type $mol_video_camera__torch__2LD0N4PI = $mol_type_enforce<
 		boolean
 		,
 		ReturnType< $mol_video_camera['torch'] >
 	>
-	type $mol_link_source__uri__1V5OBRLG = $mol_type_enforce<
+	type $mol_link_source__uri__CR667BPD = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_source['uri'] >
