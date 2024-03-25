@@ -856,6 +856,7 @@ declare namespace $ {
 		autoplay( ): boolean
 		inline( ): boolean
 		loop( ): boolean
+		muted( ): boolean
 		poster( ): string
 		stream( ): any
 		revolume( next?: any ): any
@@ -877,6 +878,7 @@ declare namespace $ {
 			'autoplay': ReturnType< $mol_video_player['autoplay'] >,
 			'playsinline': ReturnType< $mol_video_player['inline'] >,
 			'loop': ReturnType< $mol_video_player['loop'] >,
+			'muted': ReturnType< $mol_video_player['muted'] >,
 			'poster': ReturnType< $mol_video_player['poster'] >,
 		}) 
 		field( ): ({ 
@@ -1175,7 +1177,7 @@ declare namespace $ {
 
 declare namespace $ {
 
-	type $mol_svg_path__geometry__M79S906M = $mol_type_enforce<
+	type $mol_svg_path__geometry__54C4VTPR = $mol_type_enforce<
 		ReturnType< $mol_icon['path'] >
 		,
 		ReturnType< $mol_svg_path['geometry'] >
@@ -1381,27 +1383,27 @@ declare namespace $ {
 //# sourceMappingURL=source.view.tree.d.ts.map
 declare namespace $ {
 
-	type $mol_video_camera__title__038GDH6I = $mol_type_enforce<
+	type $mol_video_camera__title__7IGBQWTR = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_video_camera['title'] >
 	>
-	type $mol_video_camera__facing__22OW4PCE = $mol_type_enforce<
+	type $mol_video_camera__facing__R4E4KH7I = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_video_camera['facing'] >
 	>
-	type $mol_video_camera__sharpness__AYWIHOXE = $mol_type_enforce<
+	type $mol_video_camera__sharpness__LQGQMZ4I = $mol_type_enforce<
 		number
 		,
 		ReturnType< $mol_video_camera['sharpness'] >
 	>
-	type $mol_video_camera__torch__I677M4OH = $mol_type_enforce<
+	type $mol_video_camera__torch__QHIND3V0 = $mol_type_enforce<
 		boolean
 		,
 		ReturnType< $mol_video_camera['torch'] >
 	>
-	type $mol_link_source__uri__PBV6EA4S = $mol_type_enforce<
+	type $mol_link_source__uri__P4CN8CJH = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_source['uri'] >
