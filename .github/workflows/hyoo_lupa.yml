@@ -24,7 +24,7 @@ jobs:
         folder: 'hyoo/lupa/-' #FIXME path to build app
 
     - name: rm unused in apk files
-      run: rm -f node.* *.map *.test.* *.mjs *.ts *.deps.* *.tree
+      run: cd hyoo/lupa/- && rm -rf node.* *.map *.test.* *.mjs *.ts *.deps.* *.tree
     
     - uses: koplenov/web-to-app-action@main
       with:
