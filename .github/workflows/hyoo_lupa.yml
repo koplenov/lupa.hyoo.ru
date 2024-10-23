@@ -28,6 +28,15 @@ jobs:
           build-folder-path: 'hyoo/lupa/-' # Defaults to build, It is the folder where build files or html are stored
           app-name: 'lupa.hyoo.ru' # Defaults to MyApp
           output-folder-path: 'my-apks' # Defaults to apk/, Where final APK files are created
+
+    - uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./my-apks/apk
+        asset_name: lupa.hyoo.ru.zip
+        asset_content_type: application/zip
     
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v4
