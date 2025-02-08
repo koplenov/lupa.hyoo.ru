@@ -30,9 +30,6 @@ $.$$ = $
 
 ;
 "use strict";
-
-;
-"use strict";
 var $;
 (function ($) {
     function $mol_offline() { }
