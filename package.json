@@ -104,6 +104,8 @@
     "$mol_type_pick",
     "$mol_type_keys_extract",
     "$mol_type_keys",
+    "$mol_promise_blocker",
+    "$mol_promise_promise",
     "$mol_theme",
     "$mol_style_prop",
     "$mol_style_func",
